@@ -1,32 +1,14 @@
 <template>
   <div class="hello">
-    <h1>{{ 1 + 2 }}</h1>
+    <h1> Vue demo projekt </h1>
     <p>{{ exempel }}</p>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
+    <button v-show="showButton" v-on:click="handleClick"> Hejsan </button>
+    <button v-show="!showButton"> Jag är osynlig </button>
+    
     <h3>Lucas</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">LinkedIn</a></li>
-    </ul>
-    <h3>Test</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
 </template>
@@ -35,8 +17,15 @@
 export default {
   name: 'HelloWorld',
   data: () => ({
-    exempel: 'Detta är ett exempel på data property.'
-  })
+    exempel: 'Detta är ett exempel på data property.',
+    showButton: true
+  }),
+  methods: {
+    handleClick() {
+      console.log('Inside handleClick');
+      this.showButton = !this.showButton
+    }
+  }
 }
 </script>
 
