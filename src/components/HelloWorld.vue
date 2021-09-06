@@ -3,7 +3,7 @@
     <h1> Vue demo projekt </h1>
     <p>{{ exempel }}</p>
     <button v-show="showButton" v-on:click="handleClick"> Hejsan </button>
-    <button v-show="!showButton"> Jag är osynlig </button>
+    <button v-show="!showButton" v-on:click="handleClick"> Jag är osynlig </button>
     
     <h3>Lucas</h3>
     <ul>
