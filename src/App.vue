@@ -7,11 +7,12 @@
   </div>
   
 
-  <div>
-    Klicka här för att ändra texten:
-    <EditableText 
+  <div class="test">
+    <p>Klicka på äpplet för att skriva:</p> 
+    <h1><EditableText 
     v-bind:text="editable"
-    v-on:update="updatedText"></EditableText>
+    v-on:update="updatedText"></EditableText></h1>
+    
   </div>
   
   <Counter></Counter>
@@ -54,7 +55,20 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
+.test {
+  border: 1px;
+  padding: 1em;
+  background-color: #2e3033;
+}
+p {
+	color: #ffffff;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 1.4em;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	margin-top: 0;
+	margin-bottom: 0;
+}
 img {
   max-width: 200px;
 }

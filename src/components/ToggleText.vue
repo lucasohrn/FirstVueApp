@@ -2,8 +2,8 @@
 <div>
     <button v-on:click="hideText"> {{buttonText}} </button>
     <br>
-    <span v-show="textIsVisible">Now you see me</span> 
-    <span v-show="!textIsVisible">Now you dont</span> 
+    <span v-show="textIsVisible"> <p>Now you see me</p></span> 
+    <span v-show="!textIsVisible"><p>Now you dont</p> </span> 
 </div>
     
 </template>
@@ -33,7 +33,13 @@ export default {
 
 <style scoped>
 div {
-  border: 1px solid grey;
+  border: 1px;
   padding: 1em;
+  background-color: #2e3033;
+}
+
+button {
+  font-size: 1em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 </style>

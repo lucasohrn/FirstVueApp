@@ -26,7 +26,12 @@ export default {
 
 <style scoped>
 div {
-  border: 1px solid grey;
+  border: 1px;
   padding: 1em;
+  background-color: #2e3033;
+}
+button {
+  font-size: 1em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 </style>
