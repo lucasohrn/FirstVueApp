@@ -74,8 +74,8 @@
 <div class="mathContainer">
   <section>
     <p>{{ counter }}</p>
-    <button class="subaddbtn" v-show="mathButton" v-on:click="additionClick"> + </button>
     <button class="subaddbtn" v-show="mathButton" v-on:click="subtractionClick"> - </button>
+    <button class="subaddbtn" v-show="mathButton" v-on:click="additionClick"> + </button>
   </section>
   
   <section>
@@ -89,14 +89,6 @@
   <section>
     <button v-show="lightsButton" v-on:click="lightsOnClick" v-bind:class="[isActive ? 'white' : 'black']"> {{ Text }} </button>
   </section>
-    
-    <div class="">
-      <div v-for="term in terms" v-bind:key="term.id">
-        <strong>{{term.word}}:</strong>
-        {{term.explanation}}
-      </div>
-    </div>
-
 
 <section class="footer">
   <h3>Lucas</h3>
@@ -115,6 +107,8 @@
 
 <script>
 export default {
+  components: {
+  },
   name: 'HelloWorld',
   data: () => ({
     showButton: true,
@@ -123,12 +117,19 @@ export default {
     isActive: true,
     Text: 'Lights are ON',
     counter: 10,
-    terms: [
-      { id: 1, word: 'Data property', explanation: 'Variabler' },
-      { id: 2, word: 'Template', explanation: 'Där HTML skrivs' },
-      { id: 3, word: 'Methods', explanation: 'Där vi skriver metoderna som används i HTML/template' }
+    hej: true,
+    editable: "Exempel",
+    counters: [
+      { id: 1, num: 0 },
+      { id: 2, num: 0 },
+      { id: 3, num: 0 }
     ]
   }),
+  computed: {
+    counterView() {
+      return this.counter
+    }
+  },
   methods: {
     additionClick() {
       console.log('Inside additionClick');
