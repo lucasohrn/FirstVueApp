@@ -14,6 +14,10 @@
     v-on:update="updatedText"></EditableText></h1>
     
   </div>
+
+  <div>
+    <SimpleAjax></SimpleAjax>
+  </div>
   
   <Counter></Counter>
   <Counter></Counter>
@@ -25,6 +29,7 @@ import test from './components/HelloWorld.vue'
 import Counter from './components/Counter.vue'
 import EditableText from './components/EditableText.vue'
 import ToggleText from './components/ToggleText.vue'
+import SimpleAjax from './components/SimpleAjax.vue'
 
 export default {
   name: 'App',
@@ -32,7 +37,8 @@ export default {
     test,
     Counter,
     EditableText,
-    ToggleText
+    ToggleText,
+    SimpleAjax
   },
   data: () => ({
     editable: 'Exempel'
